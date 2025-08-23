@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Teachers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Amatic+SC:wght@400;700&family=Arizonia&family=Beau+Rivage&family=Berkshire+Swash&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Comfortaa:wght@300..700&family=Creepster&family=Dancing+Script:wght@400..700&family=Dawning+of+a+New+Day&family=Ephesis&family=Gloria+Hallelujah&family=Gravitas+One&family=Great+Vibes&family=Grenze+Gotisch:wght@100..900&family=Homemade+Apple&family=Hurricane&family=IM+Fell+DW+Pica:ital@0;1&family=Italianno&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&family=Kaushan+Script&family=Kristi&family=Lexend+Deca:wght@100..900&family=Libre+Barcode+39&family=Manufacturing+Consent&family=Marck+Script&family=Merienda:wght@300..900&family=Monsieur+La+Doulaise&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Oleo+Script:wght@400;700&family=Outfit:wght@100..900&family=Parisienne&family=Patrick+Hand&family=Permanent+Marker&family=Pinyon+Script&family=Playball&family=Playwrite+AU+QLD:wght@100..400&family=Poiret+One&family=Qwigley&family=Rock+Salt&family=Rouge+Script&family=Rye&family=Sacramento&family=Satisfy&family=Smooch+Sans:wght@100..900&family=Sora:wght@100..800&family=Special+Elite&family=Syncopate:wght@400;700&family=Tangerine:wght@400;700&family=Unbounded:wght@200..900&family=VT323&family=Whisper&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="Navbar">
+        <div class="img-container">
+            <img src="./Assets/logo.png" alt="Logo" height="60" width="60">
+            <h1>Edu-Mentors</h1>
+        </div>
+
+        <ul id="navLinks">
+            <li><a href="index.html"><i class="fa-duotone fa-regular fa-house" style="font-size:large;"></i></a></li>
+            <li>
+                <a href="favorites.html" style="position: relative;">
+                    <i class="fa-duotone fa-regular fa-heart" style="font-size:large;"></i>
+                    <span id="fav-count" style="position: absolute; top: -8px; right: -10px; background: red; color: white;
+            font-size: 12px; border-radius: 50%; padding: 2px 6px; display: none;">0</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" style="position: relative;">
+                    <i class="fa-duotone fa-regular fa-cart-shopping" style="font-size:large;"></i>
+                    <span id="cart-count" style="position: absolute; top: -8px; right: -10px; background: green; color: white;
+            font-size: 12px; border-radius: 50%; padding: 2px 6px; display: none;">0</span>
+                </a>
+            </li>
+
+            <li><a href="#"><i class="fa-duotone fa-regular fa-user" style="font-size:large;"></i></a></li>
+
+        </ul>
+    </nav>
+
+
+    <div>
+        <h1 style="font-family: Gruppo">Select the mentors</h1>
+        <p>Choose from our experienced mentors to guide you through your educational journey.</p>
+        <div class="mentor-container">
+
+            <div class="mentor-card">
+                <img src="./Assets/Mentor-Teacher1.jpg" alt="Mentor 1">
+                <div class="mentor-content">
+                    <h2>John Doe</h2>
+                    <p>Expert in Mathematics and Physics</p>
+                    <a href="mentor.html?id=1">
+                        <button class="select-button">Select</button>
+                    </a>
+
+
+                </div>
+            </div>
+
+            <div class="mentor-card">
+                <img src="./Assets/Mentor-Teacher2.jpg" alt="Mentor 2">
+                <div class="mentor-content">
+                    <h2>Jane Willy</h2>
+                    <p>Specialist in Chemistry and Biology</p>
+                    <a href="mentor.html?id=2">
+                        <button class="select-button">Select</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mentor-card">
+                <img src="./Assets/Mentor-Teacher3.jpg" alt="Mentor 3">
+                <div class="mentor-content">
+                    <h2>Dani Johnson</h2>
+                    <p>Experienced in Computer Science and Programming</p>
+                    <a href="mentor.html?id=3">
+                        <button class="select-button">Select</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mentor-card">
+                <img src="./Assets/Mentor-Teacher4.jpg" alt="Mentor 4">
+                <div class="mentor-content">
+                    <h2>Natasha John</h2>
+                    <p>Skilled in English Literature and History</p>
+                    <a href="mentor.html?id=4">
+                        <button class="select-button">Select</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mentor-card">
+                <img src="./Assets/Mentor-Teacher5.jpg" alt="Mentor 5">
+                <div class="mentor-content">
+                    <h2>Sarah Wilson</h2>
+                    <p>Expert in Art and Design</p>
+                    <a href="mentor.html?id=5">
+                        <button class="select-button">Select</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mentor-card">
+                <img src="./Assets/Mentor-Teacher6.jpg" alt="Mentor 6">
+                <div class="mentor-content">
+                    <h2>David Lee</h2>
+                    <p>Specialist in Business and Economics</p>
+                    <a href="mentor.html?id=6">
+                        <button class="select-button">Select</button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./Assets/logo.png" alt="Edu-Mentors Logo" height="40" width="40">
+                <span style="font-family: 'Comfortaa', cursive; font-size: 1.2em;">Edu-Mentors</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <a href="#">About Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 Edu-Mentors. All rights
+                    reserved.</p>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <p>Designed by <a href="" target="_blank">Sandeep Bhukya</a></p>
+        </div>
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function updateBadges() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+            const cartCount = document.getElementById("cart-count");
+            const favCount = document.getElementById("fav-count");
+
+            if (cartCount) {
+                cartCount.textContent = cart.length;
+                cartCount.style.display = cart.length > 0 ? "inline-block" : "none";
+            }
+
+            if (favCount) {
+                favCount.textContent = favorites.length;
+                favCount.style.display = favorites.length > 0 ? "inline-block" : "none";
+            }
+        }
+
+        // Run on page load
+        updateBadges();
+
+        // // ✅ Show login success popup only once
+        // window.addEventListener("load", () => {
+        //     if (localStorage.getItem("showPopup") === "true") {
+        //         document.getElementById("loginPopup").style.display = "block";
+        //         setTimeout(() => {
+        //             document.getElementById("loginPopup").style.display = "none";
+        //         }, 3000);
+        //         localStorage.removeItem("showPopup");
+        //     }
+        // });
+
+        // // ✅ Require login before accessing Teachers
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     let token = localStorage.getItem("token");
+        //     if (!token) {
+        //         // not logged in, send to login page
+        //         window.location.href = "Login.html";
+        //     }
+        // });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

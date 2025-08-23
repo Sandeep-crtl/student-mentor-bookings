@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Register.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="img-container">
+            <img src="./Assets/logo.png" alt="Logo" height="100" width="100">
+        </div>
+        <h2 style="font-family: 'comfortaa';">Register</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Conform Password" required>
+            <button type="submit">SignUp</button>
+            <p>
+                I already have an account?
+                <a href="Login.html">Login Here !</a>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            let username = document.querySelector("input[placeholder='Username']").value;
+            let password = document.querySelector("input[placeholder='Password']").value;
+
+            const res = await fetch("http://localhost:5000/api/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password })
+            });
+
+            const data = await res.json();
+            alert(data.message);
+
+            if (data.success) {
+                window.location.href = "Login.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mentor Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/brands.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Amatic+SC:wght@400;700&family=Arizonia&family=Beau+Rivage&family=Berkshire+Swash&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Comfortaa:wght@300..700&family=Creepster&family=Dancing+Script:wght@400..700&family=Dawning+of+a+New+Day&family=Ephesis&family=Gloria+Hallelujah&family=Gravitas+One&family=Great+Vibes&family=Grenze+Gotisch:wght@100..900&family=Homemade+Apple&family=Hurricane&family=IM+Fell+DW+Pica:ital@0;1&family=Italianno&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&family=Kaushan+Script&family=Kristi&family=Lexend+Deca:wght@100..900&family=Libre+Barcode+39&family=Manufacturing+Consent&family=Marck+Script&family=Merienda:wght@300..900&family=Monsieur+La+Doulaise&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mr+De+Haviland&family=Mrs+Saint+Delafield&family=Oleo+Script:wght@400;700&family=Outfit:wght@100..900&family=Parisienne&family=Patrick+Hand&family=Permanent+Marker&family=Pinyon+Script&family=Playball&family=Playwrite+AU+QLD:wght@100..400&family=Poiret+One&family=Qwigley&family=Rock+Salt&family=Rouge+Script&family=Rye&family=Sacramento&family=Satisfy&family=Smooch+Sans:wght@100..900&family=Sora:wght@100..800&family=Special+Elite&family=Syncopate:wght@400;700&family=Tangerine:wght@400;700&family=Unbounded:wght@200..900&family=VT323&family=Whisper&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+
+        .Navbar {
+            overflow: hidden;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow wrapping on small screens */
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+            transition: background-color 0.3s ease;
+            background-color: white;
+        }
+
+        .img-container {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .img-container img {
+            margin-right: 10px;
+        }
+
+        .img-container h1 {
+            font-size: 24px;
+            font-family: "IM Fell DW Pica", sans-serif;
+            white-space: nowrap;
+        }
+
+        /* Navigation links */
+        .Navbar ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            /* Allow items to wrap if space is small */
+        }
+
+        .Navbar li {
+            list-style: none;
+        }
+
+        .Navbar li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Responsive layout for small devices */
+        @media (max-width: 768px) {
+            .Navbar {
+                flex-direction: column;
+                /* Stack logo and menu */
+                align-items: center;
+                justify-content: center;
+            }
+
+            .Navbar ul {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                /* Stack menu items vertically */
+                gap: 15px;
+                width: 100%;
+            }
+
+            .Navbar li a {
+                padding: 8px 0;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .Mentor-h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .Mentor-P {
+            text-align: center;
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .mentor-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+        }
+
+        .mentor-info {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .mentor-info h2 {
+            font-family: 'Comfortaa';
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .mentor-info p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .mentor-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .mentor-image img {
+            width: 340px;
+            height: 280px;
+            border-radius: 12px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-left: 40px;
+            margin-top: 15px;
+            background-color: #000000;
+            border: 2px solid #050505;
+            padding: 15px 18px;
+            border-radius: 30px;
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #000000;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Book Button */
+        .book-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background-color: #93c58d;
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            font-weight: semibold;
+            border: 2px solid #050505;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .book-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .heart-button {
+            display: inline-block;
+            margin-top: 15px;
+            margin-left: 10px;
+            /* padding: 10px 18px; */
+            padding: 8px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: semibold;
+            border: 2px solid #050505;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .heart-button:hover {
+            background-color: transparent;
+            color: #fc0000;
+        }
+
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 40px 0 15px 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo img {
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: row;
+            padding-top: 10px;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #16c203;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .footer-social a {
+            color: #16c203;
+            font-size: 1.3rem;
+            transition: color 0.2s;
+        }
+
+        .footer-social a:hover {
+            color: #2c3e50;
+        }
+
+        .footer-copy {
+            flex-basis: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-copy p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .footer-credits {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .footer-credits p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        .footer-credits a {
+            color: #16c203;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-credits a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="Navbar">
+        <div class="img-container">
+            <img src="./Assets/logo.png" alt="Logo" height="60" width="60">
+            <h1>Edu-Mentors</h1>
+        </div>
+
+        <ul id="navLinks">
+            <li>
+                <a href="index.html">
+                    <i class="fa-duotone fa-regular fa-house" style="font-size:large;"></i>
+                </a>
+            </li>
+            <li>
+                <a href="favorites.html" style="position: relative;">
+                    <i class="fa-duotone fa-regular fa-heart" style="font-size:large;"></i>
+                    <span id="fav-count" style="position: absolute; top: -8px; right: -10px; background: red; color: white;
+            font-size: 12px; border-radius: 50%; padding: 2px 6px; display: none;">0</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" style="position: relative;">
+                    <i class="fa-duotone fa-regular fa-cart-shopping" style="font-size:large;"></i>
+                    <span id="cart-count" style="position: absolute; top: -8px; right: -10px; background: green; color: white;
+            font-size: 12px; border-radius: 50%; padding: 2px 6px; display: none;">0</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fa-duotone fa-regular fa-user" style="font-size:large;"></i></a>
+            </li>
+        </ul>
+
+        <!-- Cart Modal (hidden by default) -->
+        <div id="cart-modal" style="
+               display:none;
+               position: fixed;
+               top: 70px;
+               right: 20px;
+               width: 300px;
+               background: white;
+               border: 1px solid #ccc;
+               border-radius: 12px;
+               box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+               padding: 15px;
+               z-index: 1000;">
+            <h3>Booked Mentors</h3>
+            <ul id="cart-list" style="list-style:none; padding:0; margin-top:10px;"></ul>
+        </div>
+
+    </nav>
+
+
+
+    <h1 class="Mentor-h1" style="font-family: Gruppo">Mentor Details</h1>
+    <p class="Mentor-P">Here you can find detailed information about the mentor you selected.</p>
+    <a href="Teachers.html" class="back-link"><i class="fa-solid fa-angle-left"></i> Back to
+        mentors</a>
+    <div class="mentor-details">
+        <div class="mentor-info" id="mentor-info">
+            <!-- Mentor details will load here -->
+        </div>
+        <div class="mentor-image" id="mentor-image">
+            <!-- Mentor image will load here -->
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./Assets/logo.png" alt="Edu-Mentors Logo" height="40" width="40">
+                <span style="font-family: 'Comfortaa', cursive; font-size: 1.2em;">Edu-Mentors</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <a href="#">About Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 Edu-Mentors. All rights
+                    reserved.</p>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <p>Designed by <a href="" target="_blank">Sandeep Bhukya</a></p>
+        </div>
+        </div>
+
+    </footer>
+
+    <script src="mentor-data.js"></script>
+    <script>
+        // Get mentor ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        // Find mentor from data
+        const mentor = mentors[id - 1]; // since array starts at 0
+
+        if (mentor) {
+            document.getElementById("mentor-info").innerHTML = `
+                <h2>${mentor.name}</h2>
+                <p><strong>Subject:</strong> ${mentor.subject}</p>
+                <p><strong>Description:</strong> ${mentor.description}</p>
+                <p><strong>Rating:</strong> ⭐ ${mentor.rating}</p>
+                <p><strong>Bookings:</strong> ${mentor.bookings}</p>
+                <p><strong>Price:</strong> $${mentor.price}/-</p>
+                <p><strong>Duration:</strong> ${mentor.duration}</p>
+                <p><strong>Certification:</strong> ${mentor.certification}</p>
+                <button class="book-button"> Book Mentor <i class="fa-solid fa-angles-right"></i></button>
+                <button class="heart-button"><i class="fa-solid fa-heart"></i></button>
+            `;
+
+            document.getElementById("mentor-image").innerHTML = `
+                <img src="${mentor.image}" alt="${mentor.name}">
+            `;
+        } else {
+            document.getElementById("mentor-info").innerHTML = `<p>Mentor not found.</p>`;
+        }
+
+
+
+
+        // Get saved data or empty array
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        // Book button
+        document.addEventListener("click", function (e) {
+            if (e.target.closest(".book-button")) {
+                cart.push(mentor);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCart();
+            }
+            if (e.target.closest(".heart-button")) {
+                favorites.push(mentor);
+                localStorage.setItem("favorites", JSON.stringify(favorites));
+                updateFavorites();
+            }
+        });
+
+        // Update cart badge
+        function updateCart() {
+            const count = document.getElementById("cart-count");
+            count.textContent = cart.length;
+            count.style.display = cart.length > 0 ? "inline-block" : "none";
+        }
+
+        // Update favorites badge
+        function updateFavorites() {
+            const count = document.getElementById("fav-count");
+            count.textContent = favorites.length;
+            count.style.display = favorites.length > 0 ? "inline-block" : "none";
+        }
+
+        // Show badges on page load
+        updateCart();
+        updateFavorites();
+
+
+
+
+
+        function updateBadges() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+            const cartCount = document.getElementById("cart-count");
+            const favCount = document.getElementById("fav-count");
+
+            if (cartCount) {
+                cartCount.textContent = cart.length;
+                cartCount.style.display = cart.length > 0 ? "inline-block" : "none";
+            }
+
+            if (favCount) {
+                favCount.textContent = favorites.length;
+                favCount.style.display = favorites.length > 0 ? "inline-block" : "none";
+            }
+        }
+
+        // Run on page load
+        updateBadges();
+
+
+
+        window.addEventListener("load", () => {
+            if (localStorage.getItem("showPopup") === "true") {
+                document.getElementById("loginPopup").style.display = "block";
+                setTimeout(() => {
+                    document.getElementById("loginPopup").style.display = "none";
+                }, 3000);
+                localStorage.removeItem("showPopup");
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
