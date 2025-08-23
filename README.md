@@ -19,8 +19,7 @@ This project is designed for **personalized mentoring** – connecting learners 
 ---
 
 ## 🖼️ Project Preview
-![Project Screenshot](https://github.com/user-attachments/assets/0e64853c-ec65-458a-8286-38b5ea6cd7e1)  
-*(Replace this with your own screenshot of Student-Mentor Booking UI)*  
+<img width="1625" height="3990" alt="Image" src="https://github.com/user-attachments/assets/2ab7f665-51b8-443e-9f79-a6f98e317312" />
 
 ---
 
