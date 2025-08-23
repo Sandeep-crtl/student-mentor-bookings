@@ -1,85 +1,76 @@
 # 🎓 Student-Mentor Booking Platform
 
-A full-stack web application that connects **students** with **mentors** for personalized learning.  
-Students can browse mentors, add favorites, book sessions, and manage their learning journey.  
-Admins can manage teachers, view bookings, and monitor users.
+A modern and responsive **Student-Mentor Booking Web Application** where students can browse mentors, add them to favorites, book sessions, and track their learning journey.  
+Admins can manage mentors, view bookings, and monitor users with an easy-to-use dashboard.  
+
+This project is designed for **personalized mentoring** – connecting learners with experts seamlessly.  
 
 ---
 
-## ✨ Features
-
-### 👨‍🎓 Student
-- 🔐 Secure **Login / Signup** (JWT authentication + password hashing with bcrypt).
-- 📚 Browse mentors with **subject, duration, and price** details.
-- ❤️ Add mentors to **favorites**.
-- 🛒 Add sessions to **cart** before booking.
-- 📖 View booking history.
-
-### 👩‍🏫 Mentor
-- 📄 Displayed with **profile image, subject expertise, duration, and cost**.
-- ✅ Easy to add/update mentors from admin panel.
-
-### 🛠 Admin
-- 👥 View all registered **users**.
-- 📖 Manage all **bookings**.
-- ➕ Add / update **teachers** dynamically.
-- 📊 Dashboard to track platform activities.
+## 🚀 Features
+- 👨‍🎓 **Student Panel** – Login/Signup, browse mentors, favorites, cart, and bookings.
+- 👩‍🏫 **Mentor Profiles** – Each mentor has subject expertise, session duration, and pricing.
+- 🛒 **Cart System** – Add mentors to cart before booking.
+- 📂 **Favorites** – Save preferred mentors for later.
+- 🛠️ **Admin Dashboard** – Add mentors, manage bookings, and view user details.
+- 📱 **Fully Responsive** – Works smoothly on desktop, tablet, and mobile.
+- 🔐 **Authentication** – JWT-based secure login & signup.
 
 ---
 
-## 🏗 Tech Stack
-
-### Frontend
-- **HTML5, CSS3, JavaScript **
-- **FontAwesome & Google Fonts** for icons and styling
-- LocalStorage for quick cart/favorites
-
-### Backend
-- **Node.js + Express.js**
-- **MongoDB + Mongoose** for database
-- **JWT Authentication** for secure login
-- **bcrypt.js** for password hashing
-- **CORS** enabled API
+## 🖼️ Project Preview
+![Project Screenshot](https://github.com/user-attachments/assets/0e64853c-ec65-458a-8286-38b5ea6cd7e1)  
+*(Replace this with your own screenshot of Student-Mentor Booking UI)*  
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Tech Stack
+- **Frontend:** HTML, CSS, JavaScript  
+- **Icons & Fonts:** Font Awesome, Google Fonts  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB with Mongoose  
+- **Authentication:** JWT, bcrypt.js  
+- **Deployment:** GitHub Pages / Vercel / Netlify  
 
-### 1️⃣ Clone the Repository
+---
+
+## 📦 Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/Sandeep-crtl/student-mentor-booking.git
+2️⃣ Navigate into the project folder
 cd student-mentor-booking
-
-2️⃣ Setup Backend
+3️⃣ Setup Backend
 cd Backend
 npm install
-
-
 Create a .env file in Backend/:
 
+env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
-
-
 Run server:
 
 node server.js
-
-
 Server runs at 👉 http://localhost:5000
 
-3️⃣ Setup Frontend
+4️⃣ Setup Frontend
+Open Frontend/index.html in browser
+OR
 
-Open Frontend/index.html in browser OR host via Live Server.
+Use Live Server in VS Code for a smooth experience
 
-📂 Project Structure
+📂 Folder Structure
+
 student-mentor-booking/
 │── Backend/         # Node.js + Express backend
 │   ├── server.js    # Main API server
 │   ├── models/      # Mongoose schemas
 │   ├── routes/      # API routes
-│   └── .env         # Secrets (not pushed to repo)
+│   └── .env         # Environment variables
 │
 │── Frontend/        # HTML, CSS, JS frontend
 │   ├── index.html   # Home page
@@ -88,30 +79,23 @@ student-mentor-booking/
 │   └── script.js    # Frontend logic
 │
 └── README.md        # Documentation
+📜 How to Contribute
+Fork this repository.
 
-📸 Screenshots
+Create a new branch:
 
-(Add screenshots of your project UI here for better presentation)
+git checkout -b feature-branch
+Make your changes and commit:
 
-🤝 Contributing
 
-Fork the repo 🍴
+git commit -m "Add new feature"
+Push to your branch:
 
-Create a new branch (feature-xyz)
 
-Commit changes (git commit -m "Added xyz feature")
+git push origin feature-branch
+Open a Pull Request. ✅
 
-Push branch & create PR ✅
-
-🛡 Security
-
-Passwords stored encrypted with bcrypt.
-
-Authentication handled with JWT tokens.
-
-Sensitive credentials kept in .env.
-
-📬 Contact
-
-👨‍💻 Author: Sandeep Bhukya
-🔗 GitHub: Sandeep-crtl
+📧 Contact
+👤 Sandeep Bhukya
+📩 Email: nayaksandeep424@gmail.com
+🐙 GitHub: @Sandeep-crtl
