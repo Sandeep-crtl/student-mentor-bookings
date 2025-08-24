@@ -1,3 +1,4 @@
+// server.js
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -5,18 +6,19 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const path = require("path");
+require("dotenv").config(); // ✅ Loads .env for local development
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// 🔹 MongoDB Connection
-mongoose.connect("your-mongo-url", {
+// 🔹 MongoDB Connection (uses ENV)
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
     .then(() => console.log("✅ MongoDB Connected"))
-    .catch(err => console.log(err));
+    .catch(err => console.log("❌ MongoDB Error:", err));
 
 // 🔹 User Schema
 const userSchema = new mongoose.Schema({
@@ -25,19 +27,18 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model("User", userSchema);
 
-// 🔹 Serve static frontend
-app.use(express.static(path.join(__dirname, "Frontend")));
+// 🔹 Serve frontend (if you build React/HTML frontend inside "Frontend")
+app.use(express.static(path.join(__dirname, "Frontend/build")));
 
-// Default route → serve index.html
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "Frontend", "index.html"));
+    res.sendFile(path.resolve(__dirname, "Frontend", "build", "index.html"));
 });
 
 // 🔹 Register API
 app.post("/api/register", async (req, res) => {
     const { username, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
 
+    const hashedPassword = await bcrypt.hash(password, 10);
     try {
         const newUser = new User({ username, password: hashedPassword });
         await newUser.save();
@@ -57,10 +58,12 @@ app.post("/api/login", async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.json({ success: false, message: "Invalid password" });
 
-    const token = jwt.sign({ id: user._id }, "secretKey", { expiresIn: "1h" });
+    // ✅ Use ENV secret for JWT
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+
     res.json({ success: true, token, username: user.username });
 });
 
-// 🔹 Start Server (Render uses process.env.PORT)
+// 🔹 Start Server (Render provides PORT)
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
