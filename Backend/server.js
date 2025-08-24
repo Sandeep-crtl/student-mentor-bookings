@@ -6,7 +6,7 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const path = require("path");
-require("dotenv").config(); // ✅ Loads .env for local development
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
